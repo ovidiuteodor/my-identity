@@ -35,6 +35,12 @@ export default function Home() {
 
   const [ascuns, setAscuns] = useState(false);
 
+  const [nume, setNume] = useState("");
+
+  const[functie, setFunctie] = useState("");
+
+  const[oras, setOras] = useState("");
+
   return (
     <main className="mx-auto max-w-3xl p-8">
       
@@ -89,6 +95,37 @@ export default function Home() {
       ))}
       </div>
 
+      <input
+       type="text"
+       value={nume}
+       onChange={(e) => setNume(e.target.value)}
+       placeholder="Scrie numele tau"
+       className="rounded-lg border border-gray-300 px-4 py-2"
+      />
+
+      <input
+       type="text"
+       value={functie}
+       onChange={(e) => setFunctie(e.target.value)}
+       placeholder="Scrie functia ta"
+       className="rounded-lg border border-gray-300 px-4 py-2 mt-4"
+      />
+
+      <input
+       type="text"
+       value={oras}
+       onChange={(e) => setOras(e.target.value)}
+       placeholder="Scrie orasul tau"
+       className="rounded-lg border border-gray-300 px-4 py-2 mt-4"
+      />
+
+      {nume && functie && oras && (
+      <div>
+      <p className="mt-2">Salut, {nume}!</p>
+      <p className="mt-2">Functia ta este: {functie}</p>
+      <p className="mt-2">Orasul tau este: {oras}</p>
+      </div>
+      )}
     </main>
   );
 }
