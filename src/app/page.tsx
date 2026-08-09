@@ -1,5 +1,6 @@
 import CardProiect from "@/components/CardProiect";
 import CardExperienta from "@/components/CardExperienta";
+import Link from "next/link";
 
 export default function Home() {
   const proiecte = [
@@ -17,6 +18,26 @@ export default function Home() {
       
       <h1 className="text-4xl font-bold text-blue-600">My Identity</h1>
 
+      <div className="flex gap-4">
+      <Link href="/login">
+      <button className="rounded-lg bg-blue-600 px-4 py-2 text-white">
+        Autentificare
+      </button>
+      </Link>
+
+      <Link href="/signup">
+      <button className="rounded-lg bg-blue-600 px-4 py-2 text-white">
+        Cont nou
+      </button>
+      </Link>
+
+      <Link href="/dashboard">
+      <button className="rounded-lg bg-blue-600 px-4 py-2 text-white">
+        Dashboard
+      </button>
+      </Link>
+      </div>
+
       <h2 className="text-2xl font-semibold mt-8 ">Proiecte</h2>
     
       <div className="flex flex-col gap-4 mt-8">
@@ -30,7 +51,7 @@ export default function Home() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-8">Experienta</h2>
-      
+
       <div className="flex flex-col gap-4 mt-8">
       {experienta.map((exp) => (
         <CardExperienta
