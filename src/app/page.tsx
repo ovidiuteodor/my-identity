@@ -1,14 +1,9 @@
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import Footer from "@/components/Footer";
 import CardFeature from "@/components/CardFeature";
 
 export default function Home() {
   return (
     <main>
-
-      <Navbar />
-
       <div  className="flex flex-col items-center justify-center gap-6 px-4 py-20 text-center">
         <h1 className="text-6xl font-extrabold text-blue-600 ">
             My Identity
@@ -54,8 +49,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-      <Footer />
 
     </main>
   );
